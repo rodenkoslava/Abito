@@ -40,6 +40,91 @@ body {
     display: none;
 }
 
+.search {
+    margin-bottom: 45px;
+}
+
+.search-box {
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(37, 110, 235, 1);
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.search-box input {
+    flex-grow: 1;
+    padding: 14px 22px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    min-width: 0;
+}
+
+.search-btn {
+    display: flex;
+    align-items: center;
+}
+
+.search-btn .search-btn__icon {
+    width: 15;
+    height: 15px;
+}
+
+.search-btn .search-btn__text {
+    margin-left: 2px;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.content-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.content-main {
+    flex-grow: 1;
+}
+
+.content-side {
+    width: 260px;
+}
+
+.content-main__title {
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.content-main__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.content-main__list-item {
+    border: 1px solid #000;
+    width: calc((100% - 60px) /3);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.content-main__list-item--img {}
+
+.content-main__list-item--title {}
+
+.content-main__list-item--price {}
+
+.content-main__list-item--desc {}
 
 .header {
     padding-top: 30px;
@@ -65,11 +150,32 @@ body {
     margin-left: 6px;
 }
 
+@media (max-width : 1200px) {
+    .container {
+        min-width: 930px;
+    }
+
+    .content-main__list-item {
+        width: calc((100% - 30px) / 2);
+    }
+}
+
 @media (max-width : 991px) {
     .container {
         max-width: 730px;
     }
 
+    .content-box {
+        flex-direction: column;
+    }
+
+    .content-main {
+        width: 100%;
+    }
+
+    .content-side {
+        width: 100%;
+    }
 }
 
 @media (max-width : 786px) {
@@ -83,5 +189,16 @@ body {
 
     .header-burger {
         display: block;
+    }
+
+    .search-btn .search-btn__text {
+        display: none;
+    }
+
+}
+
+@media (max-width : 480px) {
+    .content-main__list-item {
+        width: 100%;
     }
 }
