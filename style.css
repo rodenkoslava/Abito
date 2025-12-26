@@ -14,6 +14,30 @@ body {
     margin: 0 auto;
 }
 
+.header {
+    padding-top: 30px;
+    padding-bottom: 24px;
+}
+
+.header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-logo span {
+    line-height: 28px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 6px;
+}
+
 .btn {
     line-height: 16px;
     font-size: 14px;
@@ -79,6 +103,10 @@ body {
     line-height: 19px;
 }
 
+.content {
+    padding-bottom: 50px;
+}
+
 .content-box {
     display: flex;
     justify-content: space-between;
@@ -92,6 +120,7 @@ body {
 
 .content-side {
     width: 260px;
+    min-width: 260px;
 }
 
 .content-main__title {
@@ -109,45 +138,61 @@ body {
 }
 
 .content-main__list-item {
-    border: 1px solid #000;
     width: calc((100% - 60px) /3);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     border-radius: 10px;
     overflow: hidden;
+    text-decoration: none;
 }
 
-.content-main__list-item--img {}
-
-.content-main__list-item--title {}
-
-.content-main__list-item--price {}
-
-.content-main__list-item--desc {}
-
-.header {
-    padding-top: 30px;
-    padding-bottom: 24px;
-}
-
-.header-box {
+.content-main__list-item--img {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-.header-logo {
+.content-main__list-item--img img {
+    width: 100%;
+}
+
+.content-main__list-item--title {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(10, 20, 58, 1);
+}
+
+.content-main__list-item:hover .content-main__list-item--title {
+    color: rgba(37, 110, 235, 1);
+}
+
+
+.content-main__list-item--price {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 10px;
+    color: rgba(10, 20, 58, 1);
+}
+
+content-main__list-item--desc-box {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: column;
+    row-gap: 4px;
 }
 
-.header-logo span {
-    line-height: 28px;
-    font-size: 24px;
-    font-weight: 700;
-    margin-left: 6px;
+.content-main__list-item--desc {
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(196, 196, 196, 1);
+}
+
+.content-said__title {
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 0;
+    margin-bottom: 23px;
 }
 
 @media (max-width : 1200px) {
@@ -175,6 +220,7 @@ body {
 
     .content-side {
         width: 100%;
+        min-width: none;
     }
 }
 
